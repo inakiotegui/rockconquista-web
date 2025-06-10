@@ -1,0 +1,303 @@
+.bandera {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.bandera__left,
+.bandera__right {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.bandera__left {
+  background-color: #ebebec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bandera__title {
+  color: #e5560f;
+  font-size: 8rem;
+  font-weight: 900;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.bandera__right {
+  background-image: url('../../assets/bg/texture.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bandera__buttons {
+  display: flex;
+  gap: 5rem;
+}
+
+.bandera__button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.bandera__img {
+  width: auto;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  transition: box-shadow 0.5s ease;
+}
+
+.bandera__button:hover .bandera__img {
+  outline: 4px solid transparent;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 2px white;
+}
+
+.bandera__label {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  color: white;
+  font-size: 2.1rem;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.1;
+  z-index: 2;
+}
+
+.bandera__icon {
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 130px;
+  background-color: #d24307;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.bandera__modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.bandera__modal {
+  background: white;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.bandera__modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.bandera__modal-close:hover {
+  color: #e5560f;
+}
+
+.bandera__modal-icon {
+  font-size: 4rem;
+  color: #e5560f;
+  margin-bottom: 1rem;
+}
+
+.bandera__modal-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #333;
+}
+
+.bandera__modal-text {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .bandera {
+    flex-direction: column;
+  }
+
+  .bandera__left,
+  .bandera__right {
+    width: 100%;
+    height: 50%;
+  }
+
+  .bandera__title {
+    font-size: 4rem;
+  }
+
+  .bandera__buttons {
+    gap: 2.5rem;
+  }
+
+  .bandera__img {
+    height: 220px;
+  }
+
+  .bandera__icon {
+    top: -35px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .bandera__label {
+    font-size: 1.2rem;
+  }
+  .bandera__modal {
+  width: 80%;
+  padding: 2rem;
+}
+
+.bandera__modal-text {
+  font-size: 1.3rem;
+}
+
+.bandera__modal-icon {
+  font-size: 3.5rem;
+}
+}
+
+
+@media (min-width: 601px) and (max-width: 920px) {
+  .bandera {
+    flex-direction: column;
+  }
+
+  .bandera__left,
+  .bandera__right {
+    width: 100%;
+    height: 50%;
+  }
+
+  .bandera__title {
+    font-size: 6rem;
+  }
+
+  .bandera__buttons {
+    gap: 4rem;
+  }
+
+  .bandera__img {
+    height: 340px;
+  }
+
+  .bandera__icon {
+    top: -55px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .bandera__label {
+    font-size: 2rem;
+  }
+
+  .bandera__modal {
+  width: 85%;
+  padding: 2.5rem;
+}
+
+.bandera__modal-text {
+  font-size: 1.4rem;
+}
+
+.bandera__modal-icon {
+  font-size: 4rem;
+}
+}
+
+
+@media (min-width: 921px) and (max-width: 1024px) {
+  .bandera {
+    flex-direction: column;
+  }
+
+  .bandera__left,
+  .bandera__right {
+    width: 100%;
+    height: 50%;
+  }
+
+  .bandera__title {
+    font-size: 7rem;
+  }
+
+  .bandera__buttons {
+    flex-direction: row;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .bandera__modal {
+  width: 90%;
+  padding: 2.5rem;
+}
+
+.bandera__modal-text {
+  font-size: 1.5rem;
+}
+
+.bandera__modal-icon {
+  font-size: 4.5rem;
+}
+
+}
+
+@media (min-width: 1025px) and (max-width: 1480px) {
+  .bandera__title {
+    font-size: 6.5rem;
+  }
+
+  .bandera__buttons {
+    gap: 4rem;
+  }
+
+  .bandera__img {
+    height: 340px;
+  }
+
+  .bandera__icon {
+    top: -55px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .bandera__label {
+    font-size: 1.9rem;
+  }
+}
