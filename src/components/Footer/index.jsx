@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import { FaInstagram, FaFacebookF, FaTiktok, FaYoutube } from 'react-icons/fa';
+import { usePopup } from '../../context/PopupContext';
 
 import logoEvento from '../../assets/logos/logo1.png';
 import logoProductor from '../../assets/logos/logo-productor.png';
@@ -17,20 +18,34 @@ const Footer = () => {
     }
   };
 
+  const { openPopup } = usePopup();
+
+  const handleOpenPopup = () => {
+    openPopup();
+  };
+
   const links = [
     { label: 'Inicio', targetId: 'hero' },
     { label: 'Line Up', targetId: 'lineup' },
     { label: 'Entradas', targetId: 'tickets' },
     { label: 'Novedades', targetId: 'novedades' },
-    { label: 'Tienda', targetId: 'novedades' },
-    { label: 'Contacto', targetId: 'contacto' }
+    { label: 'Tienda', targetId: 'novedades' }, // asumimos que también va a novedades
+    { label: 'Contacto', targetId: 'popup' } // este es especial
   ];
 
   return (
     <footer className="footer">
       <div className="footer__col footer__col--links">
         {links.map(({ label, targetId }) => (
-          <button key={label} onClick={() => scrollToSection(targetId)} className="footer__link">
+          <button
+            key={label}
+            onClick={() =>
+              label === 'Contacto'
+                ? handleOpenPopup()
+                : scrollToSection(targetId)
+            }
+            className="footer__link"
+          >
             {label}
           </button>
         ))}

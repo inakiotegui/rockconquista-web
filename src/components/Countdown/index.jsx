@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Countdown.css';
 
 const Countdown = () => {
@@ -18,6 +18,8 @@ const Countdown = () => {
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const containerRef = useRef(null);
+  const [showAnimation, setShowAnimation] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -27,9 +29,32 @@ const Countdown = () => {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setShowAnimation(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="countdown">
-      <div className="countdown__container">
+      <div
+        ref={containerRef}
+        className={`countdown__container ${showAnimation ? 'animate' : ''}`}
+      >
         {['days', 'hours', 'minutes', 'seconds'].map((unit, i) => (
           <div key={unit} className="countdown__block">
             <span className="countdown__number">

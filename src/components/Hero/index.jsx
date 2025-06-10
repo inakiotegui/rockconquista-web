@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Hero.css';
 
 import fondoBase from '../../assets/pictures/hero1.png';
@@ -14,17 +14,35 @@ const scrollToSection = (id) => {
 
 export default function Hero() {
   const [showMap, setShowMap] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    // Disparar las animaciones solo la primera vez
+    setHasAnimated(true);
+  }, []);
 
   return (
     <>
       <section className="hero" id="hero">
         <div className="hero__background">
-          <img src={fondoBase} alt="fondo base" className="layer fondo" />
-          <img src={logo} alt="logo festival" className="layer logo" />
-          <img src={recorteFront} alt="recorte frente" className="layer recorte" />
+          <img
+            src={fondoBase}
+            alt="fondo base"
+            className={`layer fondo `}
+          />
+          <img
+            src={logo}
+            alt="logo festival"
+            className={`layer logo ${hasAnimated ? 'animate-logo-zoom' : ''}`}
+          />
+          <img
+            src={recorteFront}
+            alt="recorte frente"
+            className={`layer recorte `}
+          />
         </div>
 
-        <div className="hero__content">
+        <div className={`hero__content ${hasAnimated ? 'animate-fade-in-delay' : ''}`}>
           <div className="hero__buttons">
             <div className="btn-wrapper">
               <button
@@ -35,10 +53,7 @@ export default function Hero() {
               </button>
             </div>
             <div className="btn-wrapper">
-              <button
-                className="btn btn--maps"
-                onClick={() => setShowMap(true)}
-              >
+              <button className="btn btn--maps" onClick={() => setShowMap(true)}>
                 CÓMO LLEGAR
               </button>
             </div>

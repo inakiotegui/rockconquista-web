@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Navbar.css';
+import { usePopup } from '../../context/PopupContext';
 
 const links = [
   { label: 'Inicio', targetId: 'hero' },
@@ -7,7 +8,7 @@ const links = [
   { label: 'Entradas', targetId: 'tickets' },
   { label: 'Novedades', targetId: 'novedades' },
   { label: 'Tienda', targetId: 'novedades' },
-  { label: 'Contacto', targetId: 'contacto' }
+  { label: 'Contacto', targetId: 'popup' } // modificamos este target para manejarlo diferente
 ];
 
 const scrollToSection = (id) => {
@@ -19,6 +20,7 @@ const scrollToSection = (id) => {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { openPopup } = usePopup();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -36,7 +38,11 @@ const Navbar = () => {
               key={label}
               className="navbar__link"
               onClick={() => {
-                scrollToSection(targetId);
+                if (label === 'Contacto') {
+                  openPopup();
+                } else {
+                  scrollToSection(targetId);
+                }
                 closeMenu();
               }}
             >

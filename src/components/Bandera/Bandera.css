@@ -24,6 +24,14 @@
   font-weight: 900;
   text-align: left;
   line-height: 1.2;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease;
+}
+
+.bandera__title--visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .bandera__right {
@@ -39,6 +47,14 @@
 .bandera__buttons {
   display: flex;
   gap: 5rem;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease;
+}
+
+.bandera__buttons--visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .bandera__button {

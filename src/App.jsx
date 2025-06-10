@@ -1,18 +1,25 @@
 import { Route, Routes } from "react-router-dom";
 
+import { PopupProvider } from './context/PopupContext.jsx';
 import Navbar from "./components/Navbar";
 import Landing from "./sections/index.jsx";
 import Footer from "./components/Footer";
+import PopUp from "./components/PopupContact";
+
+        
 
 function App() {
 
   return (
     <div className="app-container">
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Landing/>} />
-      </Routes>
-      <Footer/>
+      <PopupProvider>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Landing/>} />
+        </Routes>
+        <PopUp />
+        <Footer/>
+      </PopupProvider>
     </div>
   )
 }

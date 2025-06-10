@@ -15,11 +15,17 @@
 .lineup__title {
   position: absolute;
   top: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
   height: 110px;
   object-fit: contain;
   z-index: 2;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.lineup__title.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .lineup__tiers {
@@ -47,10 +53,32 @@
   white-space: nowrap;
   margin: 0;
   transition: transform 150ms ease-out;
+  opacity: 0;
+  transform: translateY(80px);
 }
 
 .lineup__band:hover {
   transform: translateY(-4px);
+}
+
+.lineup__band.band-in {
+  animation: bounceIn 0.6s ease forwards;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .lineup__tier--one .lineup__band {

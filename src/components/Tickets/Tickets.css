@@ -32,6 +32,14 @@
   border: 1px solid transparent;
   transition: all 0.3s ease;
   border-radius: 27px;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.tickets__button-wrapper.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .tickets__button-wrapper:hover {

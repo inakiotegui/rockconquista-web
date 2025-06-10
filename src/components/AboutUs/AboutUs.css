@@ -14,6 +14,14 @@
     margin-left: 6rem;
     color: white;
     text-align: left;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.about__content.animate {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .about__title {
