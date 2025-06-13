@@ -2,7 +2,7 @@
   position: relative;
   height: 80vh;
   width: 100%;
-  background-image: url('../../assets/bg/lineup.png');
+  background-image: url('../../assets/bg/lineup-1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -52,13 +52,24 @@
   text-align: center;
   white-space: nowrap;
   margin: 0;
-  transition: transform 150ms ease-out;
   opacity: 0;
   transform: translateY(80px);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  border: none;
+  text-shadow: none;
+  -webkit-text-stroke: 0;
 }
 
 .lineup__band:hover {
-  transform: translateY(-4px);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  filter: brightness(1.1);
+}
+
+.lineup__band:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
 }
 
 .lineup__band.band-in {

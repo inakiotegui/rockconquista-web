@@ -1,0 +1,222 @@
+.newsletter-banner {
+    position: relative;
+    background-color: #161615;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 5;
+    height: 35vh;
+}
+
+.newsletter-banner__text {
+    max-width: 50%;
+    z-index: 2;
+}
+
+.newsletter-banner__title {
+    font-size: 3.6rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.newsletter-banner__subtitle {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.newsletter-banner__form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 2;
+}
+
+.newsletter-banner__input {
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    width: 250px;
+    max-width: 100%;
+}
+
+.newsletter-banner__button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: #e64219;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-banner__button:hover {
+    background-color: rgb(182, 48, 48);
+}
+
+.newsletter-banner__texture {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .newsletter-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 20px;
+        height: auto;
+    }
+
+    .newsletter-banner__text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .newsletter-banner__title {
+        font-size: 2.4rem;
+    }
+
+    .newsletter-banner__subtitle {
+        font-size: 1.4rem;
+        opacity: 1;
+    }
+
+    .newsletter-banner__form {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .newsletter-banner__input {
+        flex: 1;
+        font-size: 1.1rem;
+        padding: 10px;
+        opacity: 1;
+    }
+
+    .newsletter-banner__button {
+        flex: 0 0 auto;
+        padding: 10px 12px;
+        font-size: 1.2rem;
+    }
+
+    .newsletter-banner__texture {
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 920px) {
+    .newsletter-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 30px;
+        height: auto;
+    }
+
+    .newsletter-banner__text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .newsletter-banner__title {
+        font-size: 2.8rem;
+    }
+
+    .newsletter-banner__subtitle {
+        font-size: 1.6rem;
+        opacity: 1;
+    }
+
+    .newsletter-banner__form {
+        width: 70%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .newsletter-banner__input {
+        flex: 1 1 auto;
+        min-width: 200px;
+    }
+
+    .newsletter-banner__button {
+        flex: 0 0 auto;
+        padding: 12px 16px;
+    }
+
+    .newsletter-banner__texture {
+        width: 60%;
+        opacity: 0.25;
+    }
+}
+
+@media (min-width: 921px) and (max-width: 1024px) {
+    .newsletter-banner {
+        padding: 40px 40px;
+        height: auto;
+    }
+
+    .newsletter-banner__title {
+        font-size: 3.2rem;
+    }
+
+    .newsletter-banner__subtitle {
+        font-size: 1.7rem;
+    }
+
+    .newsletter-banner__button {
+        padding: 12px 18px;
+    }
+
+    .newsletter-banner__texture {
+        width: 40%;
+        opacity: 0.25;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1480px) {
+    .newsletter-banner {
+        padding: 40px 50px;
+    }
+
+    .newsletter-banner__title {
+        font-size: 3.4rem;
+    }
+
+    .newsletter-banner__subtitle {
+        font-size: 1.8rem;
+    }
+
+    .newsletter-banner__input {
+        width: 240px;
+    }
+
+    .newsletter-banner__button {
+        padding: 12px 20px;
+    }
+
+    .newsletter-banner__texture {
+        width: 38%;
+        opacity: 0.3;
+    }
+}

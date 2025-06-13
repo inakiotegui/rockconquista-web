@@ -6,6 +6,7 @@ const links = [
   { label: 'Line Up', targetId: 'lineup' },
   { label: 'Entradas', targetId: 'tickets' },
   { label: 'Novedades', targetId: 'novedades' },
+  { label: 'Newsletter', targetId: 'newsletter' },
   { label: 'Tienda', targetId: 'novedades' },
   { label: 'Contacto', targetId: null }
 ];
