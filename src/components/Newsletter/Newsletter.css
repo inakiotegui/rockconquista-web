@@ -15,6 +15,14 @@
 .newsletter-banner__text {
     max-width: 50%;
     z-index: 2;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.newsletter-banner__text.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .newsletter-banner__title {
@@ -34,6 +42,14 @@
     align-items: center;
     gap: 12px;
     z-index: 2;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.newsletter-banner__form.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .newsletter-banner__input {
