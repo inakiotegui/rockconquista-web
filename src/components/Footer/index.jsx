@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './Footer.css';
 import { FaInstagram, FaFacebookF, FaTiktok, FaYoutube } from 'react-icons/fa';
-import { usePopup } from '../../context/PopupContext';
 
 import logoEvento from '../../assets/logos/logo1.png';
 import logoProductor from '../../assets/logos/logo-productor.png';
@@ -14,7 +13,6 @@ import sponsor6 from '../../assets/logos/sponsor6.png';
 import sponsor7 from '../../assets/logos/sponsor1.png';
 
 const Footer = () => {
-  const { openPopup } = usePopup();
   const centerRef = useRef(null);
 
   const scrollToSection = (id) => {
@@ -22,16 +20,22 @@ const Footer = () => {
     if (section) section.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleOpenPopup = () => openPopup();
-
   const links = [
     { label: 'Inicio', targetId: 'hero' },
     { label: 'Line Up', targetId: 'lineup' },
     { label: 'Entradas', targetId: 'tickets' },
     { label: 'Novedades', targetId: 'novedades' },
     { label: 'Tienda', targetId: 'novedades' },
-    { label: 'Contacto', targetId: 'popup' }
+    { label: 'Contacto', targetId: null }
   ];
+
+  const handleContactClick = () => {
+    const today = new Date();
+    const date = today.toLocaleDateString('es-AR');
+    const subject = encodeURIComponent(`Consulta desde la web RockConquista - ${date}`);
+    const mailto = `mailto:rockconquista@u51nagroup.com?subject=${subject}`;
+    window.open(mailto, '_blank');
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -65,7 +69,6 @@ const Footer = () => {
         observer.observe(el);
       });
 
-    // Animar internos del centro
     ['.footer__grupo-1', '.footer__grupo-2', '.footer__sponsors'].forEach(sel => {
       const el = centerRef.current?.querySelector(sel);
       if (el) el.classList.add('animate-from-bottom');
@@ -79,7 +82,7 @@ const Footer = () => {
           <button
             key={label}
             onClick={() =>
-              label === 'Contacto' ? handleOpenPopup() : scrollToSection(targetId)
+              label === 'Contacto' ? handleContactClick() : scrollToSection(targetId)
             }
             className="footer__link"
           >

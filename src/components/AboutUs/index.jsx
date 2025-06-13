@@ -33,9 +33,10 @@ const AboutUs = () => {
       >
         <h2 className="about__title">¿QUÉ ES<br />ROCK CONQUISTA?</h2>
         <p className="about__paragraph">
-          ESTE ES UN FESTIVAL DÓNDE LAS INDUSTRIAS LOCALES ESTÁN CONVOCADAS A TOMAR EL ESCENARIO CON UN ENFOQUE CLARO PARA IMPULSAR LAS ECONOMÍAS REGIONALES.<br /><br />
-          CONECTANDO LAS EMPRESAS Y LAS INDUSTRIAS DE LA ZONA CON EL PÚBLICO A TRAVÉS DE ACTIVACIONES DE MARCA DENTRO DEL FESTIVAL.<br /><br />
-          LA GASTRONOMÍA LOCAL SE HACE PROTAGONISTA CON UNA VARIADA PROPUESTA QUE INCLUYE LOS MEJORES SABORES DEL LITORAL DESDE PARRILLAS Y COMIDAS TÍPICAS HASTA PROPUESTAS INNOVADORAS E INCLUSIVAS, QUE TENGAN UN SELLO LOCAL E INTERNACIONAL.
+          Un festival que va más allá de la música.<br /><br />
+          Un encuentro de cultura rock, en la forma más pura y vibrante. Una propuesta totalmente inmersiva orientada a toda la familia.<br /><br />
+          Rock Conquista es la fusión perfecta entre música, cultura, gastronomía y experiencias múltiples.<br /><br />
+          ¡Sean todos bienvenidos al Rock Conquista!
         </p>
       </div>
     </section>

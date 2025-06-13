@@ -58,7 +58,7 @@ const Lineup = () => {
       />
       <div className="lineup__tiers">
         <div className="lineup__tier lineup__tier--one">
-          {['GUASONES✦', '✦CRUZANDO EL CHARCO✦', '✦EL PLAN DE LA MARIPOSA'].map((band, i) => (
+          {['✦GUASONES✦', '✦CRUZANDO EL CHARCO✦', '✦EL PLAN DE LA MARIPOSA✦'].map((band, i) => (
             <div
               key={i}
               ref={el => (bandsRef.current[i] = el)}
@@ -70,7 +70,7 @@ const Lineup = () => {
           ))}
         </div>
         <div className="lineup__tier lineup__tier--two">
-          {['LA MISSISSIPPI✦', '✦PLANEADOR V✦', '✦WAYRA MENDOZA✦'].map((band, i) => {
+          {['✦LA MISSISSIPPI✦', '✦PLANEADOR V✦', '✦WAYRA IGLESIAS✦'].map((band, i) => {
             const index = i + 3;
             return (
               <div
