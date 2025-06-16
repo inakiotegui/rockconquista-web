@@ -32,7 +32,7 @@ const artistData = {
     image: planeadorImg,
   },
   'WAYRA IGLESIAS': {
-    intro: 'Artista con una impronta musical centrada en el blues elegante con tintes de rock y soul.<br /><br />Revelación del Consquín Rock 2023.',
+    intro: 'Artista con una impronta musical centrada en el blues elegante con tintes de rock y soul.<br /><br />Revelación del Cosquín Rock 2023.',
     image: wayraImg,
   },
   'DANIELA MILAGROS': {
