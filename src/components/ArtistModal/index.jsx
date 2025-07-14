@@ -6,7 +6,6 @@ import planImg from '../../assets/pictures/lineup-img-3.png';
 import mississippiImg from '../../assets/pictures/lineup-img-7.png';
 import planeadorImg from '../../assets/pictures/lineup-img-8.png';
 import wayraImg from '../../assets/pictures/lineup-img-9.png';
-import danielaImg from '../../assets/pictures/lineup-img-2.png';
 import enigmaticosImg from '../../assets/pictures/lineup-img-4.png';
 import eximiosImg from '../../assets/pictures/lineup-img-5.png';
 
@@ -34,10 +33,6 @@ const artistData = {
   'WAYRA IGLESIAS': {
     intro: 'Artista con una impronta musical centrada en el blues elegante con tintes de rock y soul.<br /><br />Revelación del Cosquín Rock 2023.',
     image: wayraImg,
-  },
-  'DANIELA MILAGROS': {
-    intro: 'Artista emergente destacada de la escena pop rock argentina. Cantante, compositora, actriz y artista multi-instrumentista.',
-    image: danielaImg,
   },
   'ENIGMÁTICOS': {
     intro: 'Banda familia emergente oriundos de Avellaneda, Santa Fe, con 7 años de trayectoria recorriendo escenarios por toda Argentina.',

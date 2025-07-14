@@ -8,7 +8,7 @@ const Lineup = () => {
   const bandsRef = useRef([]);
   const [titleVisible, setTitleVisible] = useState(false);
   const [visibleBands, setVisibleBands] = useState([]);
-  const [selectedArtist, setSelectedArtist] = useState(null); // NUEVO
+  const [selectedArtist, setSelectedArtist] = useState(null);
 
   useEffect(() => {
     const titleObserver = new IntersectionObserver(
@@ -98,7 +98,7 @@ const Lineup = () => {
           })}
         </div>
         <div className="lineup__tier lineup__tier--three">
-          {['✦DANIELA MILAGROS✦', '✦ENIGMÁTICOS✦', '✦EXIMIOS✦'].map((band, i) => {
+          {['✦ENIGMÁTICOS✦', '✦EXIMIOS✦'].map((band, i) => {
             const index = i + 6;
             return (
               <button

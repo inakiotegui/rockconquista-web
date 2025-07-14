@@ -4,13 +4,19 @@ import { FaInstagram, FaFacebookF, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 import logoEvento from '../../assets/logos/logo1.png';
 import logoProductor from '../../assets/logos/logo-productor.png';
-import sponsor1 from '../../assets/logos/sponsor3.png';
-import sponsor2 from '../../assets/logos/sponsor2.png';
-import sponsor3 from '../../assets/logos/sponsor5.png';
-import sponsor4 from '../../assets/logos/sponsor4.png';
-import sponsor5 from '../../assets/logos/sponsor7.png';
-import sponsor6 from '../../assets/logos/sponsor6.png';
-import sponsor7 from '../../assets/logos/sponsor1.png';
+import sponsor1 from '../../assets/logos/sponsor1.svg';
+import sponsor2 from '../../assets/logos/sponsor2.svg';
+import sponsor3 from '../../assets/logos/sponsor3.svg';
+import sponsor4 from '../../assets/logos/sponsor4.svg';
+import sponsor5 from '../../assets/logos/sponsor5.svg';
+import sponsor6 from '../../assets/logos/sponsor6.svg';
+import sponsor7 from '../../assets/logos/sponsor7.svg';
+import sponsor8 from '../../assets/logos/sponsor8.svg';
+import sponsor9 from '../../assets/logos/sponsor9.svg';
+import sponsor10 from '../../assets/logos/sponsor10.svg';
+import sponsor11 from '../../assets/logos/sponsor11.svg';
+import sponsor12 from '../../assets/logos/sponsor12.svg';
+import sponsor13 from '../../assets/logos/sponsor13.svg';
 
 const Footer = () => {
   const centerRef = useRef(null);
@@ -27,13 +33,15 @@ const Footer = () => {
     { label: 'Novedades', targetId: 'novedades' },
     { label: 'Newsletter', targetId: 'newsletter' },
     { label: 'Tienda', targetId: 'novedades' },
-    { label: 'Contacto', targetId: null }
+    { label: 'Contacto', targetId: null },
   ];
 
   const handleContactClick = () => {
     const today = new Date();
     const date = today.toLocaleDateString('es-AR');
-    const subject = encodeURIComponent(`Consulta desde la web RockConquista - ${date}`);
+    const subject = encodeURIComponent(
+      `Consulta desde la web RockConquista - ${date}`
+    );
     const mailto = `mailto:rockconquista@u51nagroup.com?subject=${subject}`;
     window.open(mailto, '_blank');
   };
@@ -41,7 +49,7 @@ const Footer = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const el = entry.target;
             el.classList.add('visible');
@@ -64,16 +72,20 @@ const Footer = () => {
     );
 
     document
-      .querySelectorAll('.footer__col--links, .footer__col--center, .footer__col--redes')
-      .forEach(el => {
+      .querySelectorAll(
+        '.footer__col--links, .footer__col--center, .footer__col--redes'
+      )
+      .forEach((el) => {
         el.classList.add('animate-from-bottom');
         observer.observe(el);
       });
 
-    ['.footer__grupo-1', '.footer__grupo-2', '.footer__sponsors'].forEach(sel => {
-      const el = centerRef.current?.querySelector(sel);
-      if (el) el.classList.add('animate-from-bottom');
-    });
+    ['.footer__grupo-1', '.footer__grupo-2', '.footer__sponsors'].forEach(
+      (sel) => {
+        const el = centerRef.current?.querySelector(sel);
+        if (el) el.classList.add('animate-from-bottom');
+      }
+    );
   }, []);
 
   return (
@@ -83,7 +95,9 @@ const Footer = () => {
           <button
             key={label}
             onClick={() =>
-              label === 'Contacto' ? handleContactClick() : scrollToSection(targetId)
+              label === 'Contacto'
+                ? handleContactClick()
+                : scrollToSection(targetId)
             }
             className="footer__link"
           >
@@ -94,18 +108,45 @@ const Footer = () => {
 
       <div className="footer__col footer__col--center" ref={centerRef}>
         <div className="footer__grupo-1">
-          <img src={logoEvento} alt="Logo Evento" className="footer__logo-evento" />
+          <img
+            src={logoEvento}
+            alt="Logo Evento"
+            className="footer__logo-evento"
+          />
           <p className="footer__frase">LA MÚSICA COMO BANDERA</p>
         </div>
 
         <div className="footer__grupo-2">
           <p className="footer__producido">PRODUCIDO POR</p>
-          <img src={logoProductor} alt="Logo Productor" className="footer__logo-productor" />
+          <img
+            src={logoProductor}
+            alt="Logo Productor"
+            className="footer__logo-productor"
+          />
         </div>
 
         <div className="footer__sponsors">
-          {[sponsor1, sponsor2, sponsor3, sponsor4, sponsor5, sponsor6, sponsor7].map((src, i) => (
-            <img key={i} src={src} alt={`Sponsor ${i + 1}`} className="footer__sponsor" />
+          {[
+            sponsor1,
+            sponsor2,
+            sponsor3,
+            sponsor4,
+            sponsor5,
+            sponsor6,
+            sponsor7,
+            sponsor8,
+            sponsor9,
+            sponsor10,
+            sponsor11,
+            sponsor12,
+            sponsor13,
+          ].map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              alt={`Sponsor ${i + 1}`}
+              className={`footer__sponsor ${i === 12 ? 'footer__sponsor--wide' : ''}`}
+            />
           ))}
         </div>
       </div>
@@ -115,23 +156,23 @@ const Footer = () => {
           {
             name: 'Instagram',
             icon: <FaInstagram />,
-            url: 'https://www.instagram.com/rockconquista_'
+            url: 'https://www.instagram.com/rockconquista_',
           },
           {
             name: 'TikTok',
             icon: <FaTiktok />,
-            url: 'https://www.tiktok.com/@rockconquista_'
+            url: 'https://www.tiktok.com/@rockconquista_',
           },
           {
             name: 'Facebook',
             icon: <FaFacebookF />,
-            url: 'https://www.facebook.com/rockconquista/'
+            url: 'https://www.facebook.com/rockconquista/',
           },
           {
             name: 'YouTube',
             icon: <FaYoutube />,
-            url: 'https://youtube.com/@rockconquista?si=4QgjkYgeKt6IM_j0&sub_confirmation=1'
-          }
+            url: 'https://youtube.com/@rockconquista?si=4QgjkYgeKt6IM_j0&sub_confirmation=1',
+          },
         ].map(({ name, icon, url }) => (
           <a
             key={name}
