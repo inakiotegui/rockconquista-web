@@ -188,7 +188,11 @@
   }
 
   .footer__sponsor {
-    max-width: 70px;
+    max-width: 110px;
+  }
+
+  .footer__sponsor--wide {
+    max-width: 160px;
   }
 
   .footer__link,
