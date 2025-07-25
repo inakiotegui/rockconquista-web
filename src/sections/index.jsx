@@ -4,6 +4,8 @@ import Bandera from '../components/Bandera';
 import Countdown from '../components/Countdown';
 import AboutUs from '../components/AboutUs';
 import Lineup from '../components/Lineup';
+import Playlist from '../components/Playlist';
+import Novedades from '../components/Novedades';
 import Newsletter from '../components/Newsletter';
 
 const Sections = () => {
@@ -15,6 +17,8 @@ const Sections = () => {
         <Countdown />
         <AboutUs />
         <Lineup />
+        <Playlist />
+        <Novedades />
         <Newsletter />
       </main>
   );

@@ -7,7 +7,8 @@ const links = [
   { label: 'Entradas', targetId: 'tickets' },
   { label: 'Novedades', targetId: 'novedades' },
   { label: 'Newsletter', targetId: 'newsletter' },
-  { label: 'Tienda', targetId: 'novedades' },
+  { label: 'Tienda', targetId: 'tienda' },
+  { label: 'Playlist', targetId: 'playlist' },
   { label: 'Contacto', targetId: null }
 ];
 
