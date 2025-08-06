@@ -29,14 +29,14 @@ const Footer = () => {
   });
 
   useEffect(() => {
-  if (!emblaApi) return;
+    if (!emblaApi) return;
 
-  const interval = setInterval(() => {
-    emblaApi.scrollNext();
-  }, 3000);
+    const interval = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 1800);
 
-  return () => clearInterval(interval);
-}, [emblaApi]);
+    return () => clearInterval(interval);
+  }, [emblaApi]);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -118,6 +118,9 @@ const Footer = () => {
     sponsor13,
   ];
 
+  const primarySponsors = sponsors.slice(0, 8);
+  const secondarySponsors = sponsors.slice(8);
+
   return (
     <footer className="footer">
       <div className="footer__top">
@@ -197,17 +200,34 @@ const Footer = () => {
       <div className="footer__bottom">
         <div className="footer__sponsor-carousel" ref={emblaRef}>
           <div className="footer__sponsor-container">
-            {sponsors.map((src, i) => (
-              <div className="footer__sponsor-slide" key={i}>
+            {primarySponsors.map((src, i) => (
+              <div className="footer__sponsor-slide" key={`p-${i}`}>
                 <img
                   src={src}
                   alt={`Sponsor ${i + 1}`}
-                  className={`footer__sponsor ${
-                    i === 12 ? 'footer__sponsor--wide' : ''
-                  }`}
+                  className="footer__sponsor"
                 />
               </div>
             ))}
+            <div
+              className="footer__sponsor-divider"
+              aria-hidden="true"
+              title="Separador de sponsors"
+            ></div>
+            {secondarySponsors.map((src, i) => {
+              const isWide = i === secondarySponsors.length - 1;
+              return (
+                <div className="footer__sponsor-slide" key={`s-${i}`}>
+                  <img
+                    src={src}
+                    alt={`Sponsor ${8 + i + 1}`}
+                    className={`footer__sponsor footer__sponsor--secondary ${
+                      isWide ? 'footer__sponsor--wide' : ''
+                    }`}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
