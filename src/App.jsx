@@ -4,9 +4,10 @@ import { PopupProvider } from './context/PopupContext.jsx';
 import Navbar from "./components/Navbar";
 import Landing from "./sections/index.jsx";
 import Footer from "./components/Footer";
+import DevBar from "./components/DevBar";
 import PopUp from "./components/PopupContact";
 
-        
+
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         </Routes>
         <PopUp />
         <Footer/>
+        <DevBar/>
       </PopupProvider>
     </div>
   )
