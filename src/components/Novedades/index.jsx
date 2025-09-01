@@ -10,6 +10,8 @@ import img3 from '../../assets/pictures/nw-3.png';
 import img4 from '../../assets/pictures/nw-4.png';
 import img5 from '../../assets/pictures/nw-5.png';
 import img6 from '../../assets/pictures/nw-6.png';
+import img7 from '../../assets/pictures/nw-7.png';
+import img8 from '../../assets/pictures/nw-8.png';
 
 const newsItems = [
   { id: 1, image: img1, title: 'EL PLAN DE LA MARIPOSA EN ROCK CONQUISTA 2025', url: 'https://www.instagram.com/rockconquista_/reel/DL_JdjWsKSB/' },
@@ -18,6 +20,8 @@ const newsItems = [
   { id: 4, image: img4, title: 'LA MISSISSIPPI LLEGA A ROCK CONQUISTA', url: 'https://www.instagram.com/rockconquista_/reel/DMOjcgVAQqT/' },
   { id: 5, image: img5, title: 'WAYRA IGLESIAS TE INVITA AL ROCK CONQUISTA 2025', url: 'https://www.instagram.com/rockconquista_/reel/DMYzSQrsNcc/' },
   { id: 6, image: img6, title: 'PLANEADOR V TE INVITA A VIVIR LA EXPERIENCIA ROCK CONQUISTA', url: 'https://www.instagram.com/rockconquista_/reel/DMq0653Oovl/' },
+  { id: 7, image: img7, title: 'EXIMIOS LOS ESPERA EN ROCK CONQUISTA 2025', url: 'https://www.instagram.com/rockconquista_/reel/DNg5hWPMV_G/' },
+  { id: 8, image: img8, title: 'ENIGMATICOS TE INVITA A VIVIR EL ROCK CONQUISTA 2025', url: 'https://www.instagram.com/rockconquista_/reel/DNt02GPwOyf/' },
 ];
 
 const Novedades = () => {

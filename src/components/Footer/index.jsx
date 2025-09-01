@@ -18,6 +18,18 @@ import sponsor10 from '../../assets/logos/sponsor10.svg';
 import sponsor11 from '../../assets/logos/sponsor11.svg';
 import sponsor12 from '../../assets/logos/sponsor12.svg';
 import sponsor13 from '../../assets/logos/sponsor13.svg';
+import sponsor14 from '../../assets/logos/sponsor14.png';
+import sponsor15 from '../../assets/logos/sponsor15.png';
+import sponsor16 from '../../assets/logos/sponsor16.png';
+import sponsor17 from '../../assets/logos/sponsor17.png';
+import sponsor18 from '../../assets/logos/sponsor18.png';
+import sponsor19 from '../../assets/logos/sponsor19.png';
+import sponsor20 from '../../assets/logos/sponsor20.png';
+import sponsor21 from '../../assets/logos/sponsor21.png';
+import sponsor22 from '../../assets/logos/sponsor22.png';
+import sponsor23 from '../../assets/logos/sponsor23.png';
+import sponsor24 from '../../assets/logos/sponsor24.png';
+import sponsor25 from '../../assets/logos/sponsor25.png';
 
 const Footer = () => {
   const centerRef = useRef(null);
@@ -103,7 +115,6 @@ const Footer = () => {
   ];
 
   const sponsors = [
-    sponsor1,
     sponsor2,
     sponsor3,
     sponsor4,
@@ -111,11 +122,21 @@ const Footer = () => {
     sponsor6,
     sponsor7,
     sponsor8,
+    sponsor16,
     sponsor9,
     sponsor10,
+    sponsor17,
+    sponsor18,
+    sponsor19,
     sponsor11,
-    sponsor12,
     sponsor13,
+    sponsor20,
+    sponsor21,
+    sponsor22,
+    sponsor23,
+    sponsor12,
+    sponsor24,
+    sponsor25,
   ];
 
   const primarySponsors = sponsors.slice(0, 8);
@@ -157,6 +178,16 @@ const Footer = () => {
               alt="Logo Productor"
               className="footer__logo-productor"
             />
+          </div>
+          <div className="footer__destacados">
+            <div className="footer__destacado footer__destacado--left">
+              <img src={sponsor1} alt="Sponsor principal 1" />
+            </div>
+            <div className="footer__destacado-separator"></div>
+            <div className="footer__destacado footer__destacado--right">
+              <img src={sponsor14} alt="Sponsor principal 2" />
+              <img src={sponsor15} alt="Sponsor principal 3" />
+            </div>
           </div>
         </div>
 
@@ -215,7 +246,7 @@ const Footer = () => {
               title="Separador de sponsors"
             ></div>
             {secondarySponsors.map((src, i) => {
-              const isWide = i === secondarySponsors.length - 1;
+              const isWide = i === secondarySponsors.length - 8;
               return (
                 <div className="footer__sponsor-slide" key={`s-${i}`}>
                   <img
@@ -228,6 +259,11 @@ const Footer = () => {
                 </div>
               );
             })}
+            <div
+              className="footer__sponsor-divider"
+              aria-hidden="true"
+              title="Separador de sponsors"
+            ></div>
           </div>
         </div>
       </div>
