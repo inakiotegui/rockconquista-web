@@ -20,10 +20,6 @@ Construida con las últimas tecnologías de frontend, busca transmitir la energ�
 
 👉 [rockconquista.com](https://www.rockconquista.com/)
 
-## 📸 Vista previa
-
-![RockConquista Preview](https://www.rockconquista.com/preview.png)
-
 ## 📂 Estructura destacada
 
 - `src/` → Código fuente principal (componentes, hooks, estilos).
