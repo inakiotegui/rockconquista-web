@@ -114,8 +114,6 @@ const Lineup = () => {
           })}
         </div>
       </div>
-
-      {/* MODAL */}
       {selectedArtist && (
         <ArtistModal artistName={selectedArtist} onClose={handleCloseModal} />
       )}
