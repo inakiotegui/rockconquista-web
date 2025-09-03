@@ -13,46 +13,16 @@ Construida con las últimas tecnologías de frontend, busca transmitir la energ�
 - [Vite 6](https://vitejs.dev/) – Bundler ultrarrápido para desarrollo y build.
 - [Framer Motion](https://www.framer.com/motion/) – Animaciones fluidas y modernas.
 - [Embla Carousel](https://www.embla-carousel.com/) – Carruseles interactivos y responsivos.
-- [React Router 7](https://reactrouter.com/) – Navegación declarativa.
 - [EmailJS](https://www.emailjs.com/) – Integración de formularios de contacto.
 - [React Icons](https://react-icons.github.io/react-icons/) – Iconografía optimizada.
-- [react-phone-input-2](https://github.com/bl00mber/react-phone-input-2) – Input avanzado para teléfonos.
 
-## 🔗 Demo en vivo
+## 🔗 Link
 
 👉 [rockconquista.com](https://www.rockconquista.com/)
 
 ## 📸 Vista previa
 
 ![RockConquista Preview](https://www.rockconquista.com/preview.png)
-
-## ⚙️ Instalación y uso
-
-Clonar el repositorio e instalar dependencias:
-
-```bash
-git clone https://github.com/tuusuario/rockconquista-web.git
-cd rockconquista-web
-npm install
-```
-
-### Desarrollo
-
-```bash
-npm run dev
-```
-
-### Build de producción
-
-```bash
-npm run build
-```
-
-### Vista previa del build
-
-```bash
-npm run preview
-```
 
 ## 📂 Estructura destacada
 
