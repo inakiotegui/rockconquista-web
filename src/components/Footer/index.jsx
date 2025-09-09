@@ -15,7 +15,7 @@ import sponsor7 from '../../assets/logos/sponsor7.svg';
 import sponsor8 from '../../assets/logos/sponsor8.svg';
 import sponsor9 from '../../assets/logos/sponsor9.svg';
 import sponsor10 from '../../assets/logos/sponsor10.svg';
-import sponsor11 from '../../assets/logos/sponsor11.svg';
+import sponsor26 from '../../assets/logos/sponsor26.png';
 import sponsor12 from '../../assets/logos/sponsor12.svg';
 import sponsor13 from '../../assets/logos/sponsor13.svg';
 import sponsor14 from '../../assets/logos/sponsor14.png';
@@ -30,6 +30,18 @@ import sponsor22 from '../../assets/logos/sponsor22.png';
 import sponsor23 from '../../assets/logos/sponsor23.png';
 import sponsor24 from '../../assets/logos/sponsor24.png';
 import sponsor25 from '../../assets/logos/sponsor25.png';
+import sponsor27 from '../../assets/logos/sponsor27.png';
+import sponsor28 from '../../assets/logos/sponsor28.png';
+import sponsor29 from '../../assets/logos/sponsor29.png';
+import sponsor30 from '../../assets/logos/sponsor30.png';
+import sponsor31 from '../../assets/logos/sponsor31.png';
+import sponsor32 from '../../assets/logos/sponsor32.png';
+import sponsor33 from '../../assets/logos/sponsor33.png';
+import sponsor34 from '../../assets/logos/sponsor34.png';
+import sponsor35 from '../../assets/logos/sponsor35.png';
+import sponsor36 from '../../assets/logos/sponsor36.png';
+import sponsor37 from '../../assets/logos/sponsor37.png';
+import sponsor38 from '../../assets/logos/sponsor38.png';
 
 const Footer = () => {
   const centerRef = useRef(null);
@@ -120,18 +132,30 @@ const Footer = () => {
     sponsor4,
     sponsor5,
     sponsor6,
+    sponsor16,
     sponsor7,
     sponsor8,
-    sponsor16,
     sponsor9,
     sponsor10,
     sponsor17,
     sponsor18,
     sponsor19,
-    sponsor11,
+    sponsor26,
     sponsor13,
     sponsor20,
     sponsor21,
+    sponsor27,
+    sponsor28,
+    sponsor29,
+    sponsor30,
+    sponsor31,
+    sponsor32,
+    sponsor33,
+    sponsor34,
+    sponsor35,
+    sponsor36,
+    sponsor37,
+    sponsor38,
     sponsor22,
     sponsor23,
     sponsor12,
@@ -246,7 +270,7 @@ const Footer = () => {
               title="Separador de sponsors"
             ></div>
             {secondarySponsors.map((src, i) => {
-              const isWide = i === secondarySponsors.length - 8;
+              const isWide = i === 6;
               return (
                 <div className="footer__sponsor-slide" key={`s-${i}`}>
                   <img
